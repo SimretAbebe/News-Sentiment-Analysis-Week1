@@ -1,7 +1,7 @@
 # Financial News Sentiment & Stock Price Correlation Analysis
 
 ## Project Overview
-This project, conducted for **Nova Financial Solutions**, aims to enhance predictive analytics capabilities by connecting market narratives to price action. By analyzing the **Financial News and Stock Price Integration Dataset (FNSPID)**, we separate "signal from noise" to determine the statistical relationship between news sentiment and stock market movements.
+This project, conducted for **Nova Financial Solutions**, enhances predictive analytics capabilities by connecting market narratives to price action. By analyzing the **Financial News and Stock Price Integration Dataset (FNSPID)**, we successfully built an end-to-end pipeline that quantifies news sentiment, computes technical indicators, and measures their statistical relationship.
 
 ## Project Structure
 ```text
@@ -10,7 +10,7 @@ news-sentiment-analysis/
 ├── data/                   # Raw and processed datasets
 ├── notebooks/              # Jupyter notebooks for EDA and analysis
 ├── src/                    # Source code for utility functions
-├── tests/                  # Unit tests for the analysis pipeline
+├── tests/              # Unit tests for the analysis pipeline
 ├── scripts/                # Standalone Python scripts
 ├── requirements.txt        # Project dependencies
 └── README.md               # Project documentation
@@ -18,9 +18,9 @@ news-sentiment-analysis/
 
 ## Key Tasks & Progress
 ### Task 1: Exploratory Data Analysis (EDA)
-- **Descriptive Statistics:** Analyzed headline lengths and publication frequency.
+- **Descriptive Statistics:** Analyzed headline lengths and publication frequency across 1.4M articles.
 - **Publisher Analysis:** Identified the top 10 most active news sources.
-- **Text Analysis:** Extracted significant keywords and recurring themes using NLP.
+- **Text Analysis:** Extracted significant keywords and recurring themes using NLP Bigrams.
 - **Time-Series Analysis:** Mapped news volume spikes, identifying a regime shift in 2020.
 
 ### Task 2: Quantitative Analysis
@@ -28,10 +28,15 @@ news-sentiment-analysis/
 - **Financial Metrics:** Calculated annualized volatility and log returns.
 - **Visualization:** Developed an integrated dashboard for correlating indicators with price action.
 
-### Task 3: Correlation Analysis (Upcoming)
-- Sentiment scoring using NLTK VADER.
-- Date alignment between news and trading days.
-- Pearson correlation analysis and investment strategy recommendations.
+### Task 3: Correlation Analysis
+- **Sentiment Scoring:** Applied **NLTK VADER** to assign numerical scores to headlines.
+- **Date Alignment:** Synchronized news timestamps with the stock trading calendar.
+- **Pearson Correlation:** Identified a **0.1196** correlation between sentiment and returns.
+- **Interpretations:** Proved that positive sentiment days correlate with higher average daily returns.
+
+## Key Insights
+- **Sentiment Signal:** While daily headlines are noisy, the aggregate sentiment provides a statistically significant leading indicator for price momentum.
+- **Volatility Context:** High news volume (e.g., in 2020) acts as a baseline for increased market uncertainty and trend reversals.
 
 ## Installation & Setup
 1. **Clone the repository:**
